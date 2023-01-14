@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h2>Covid-19 DataSet</h2>
+  <form method="POST" action="/index">
+    <h3>Bar Graph</h3>
+    <label for="continent">Choose a continent you want to use:</label>
+    <select id="continent" name="continent">
+      <option value="Africa">Africa</option>
+      <option value="Asia">Asia</option>
+      <option value="Europe">Europe</option>
+      <option value="North America">North America</option>
+      <option value="Oceania">Oceania</option>
+      <option value="South America">South America</option>
+    </select>
+    <br>
+
+    <label for="barColumn">Choose a column you want to use:</label>
+    <select id="barColumn" name="barColumn">
+      <option value="population">population</option>
+      <option value="population_density">population_density</option>
+      <option value="median_age">median_age</option>
+      <option value="aged_65_older">aged_65_older</option>
+      <option value="aged_70_older">aged_70_older</option>
+      <option value="gdp_per_capita">gdp_per_capita</option>
+      <option value="extreme_poverty">extreme_poverty</option>
+      <option value="cardiovasc_death_rate">cardiovasc_death_rate</option>
+      <option value="diabetes_prevalence">diabetes_prevalence</option>
+      <option value="female_smokers">female_smokers</option>
+      <option value="male_smokers">male_smokers</option>
+      <option value="handwashing_facilities">handwashing_facilities</option>
+      <option value="hospital_beds_per_thousand">hospital_beds_per_thousand</option>
+      <option value="life_expectancy">life_expectancy</option>
+      <option value="human_development_index">human_development_index</option>
+    </select>
+    <br>
+
+    <h3>Line Graph</h3>
+    <label for="location">Choose a location you want to use:</label>
+    <select id="location" name="location">
+      <option value="Afghanistan">Afghanistan</option>
+      <option value="Argentina">Argentina</option>
+      <option value="Australia">Australia</option>
+      <option value="Belgium">Belgium</option>
+      <option value="Brazil">Brazil</option>
+      <option value="Bulgaria">Bulgaria</option>
+      <option value="Cambodia">Cambodia</option>
+      <option value="Canada">Canada</option>
+      <option value="Chile">Chile</option>
+      <option value="China">China</option>
+      <option value="Congo">Congo</option>
+      <option value="Cuba">Cuba</option>
+      <option value="Denmark">Denmark</option>
+      <option value="Egypt">Egypt</option>
+      <option value="Finland">Finland</option>
+      <option value="Germany">Germany</option>
+      <option value="Greece">Greece</option>
+      <option value="Hong Kong">Hong Kong</option>
+      <option value="India">India</option>
+      <option value="Indonesia">Indonesia</option>
+      <option value="Iraq">Iraq</option>
+      <option value="Ireland">Ireland</option>
+      <option value="Israel">Israel</option>
+      <option value="Italy">Italy</option>
+      <option value="Japan">Japan</option>
+      <option value="Malaysia">Malaysia</option>
+      <option value="Netherlands">Netherlands</option>
+      <option value="New Zealand">New Zealand</option>
+      <option value="Poland">Poland</option>
+      <option value="Russia">Russia</option>
+      <option value="Singapore">Singapore</option>
+      <option value="South Korea">South Korea</option>
+      <option value="Syria">Syria</option>
+      <option value="Taiwan">Taiwan</option>
+      <option value="Thailand">Thailand</option>
+      <option value="Turkey">Turkey</option>
+      <option value="Ukraine">Ukraine</option>
+      <option value="United Kingdom">United Kingdom</option>
+      <option value="United States">United States</option>
+    </select>
+    <br>
+
+    <label for="lineColumn">Choose a column you want to use:</label>
+    <select id="lineColumn" name="lineColumn">
+      <option value="total_cases">total_cases</option>
+      <option value="new_cases">new_cases</option>
+      <option value="new_cases_smoothed">new_cases_smoothed</option>
+      <option value="total_cases_per_million">total_cases_per_million</option>
+      <option value="new_cases_per_million">new_cases_per_million</option>
+      <option value="new_cases_smoothed_per_million">new_cases_smoothed_per_million</option>
+
+      <option value="total_deaths">total_deaths</option>
+      <option value="new_deaths">new_deaths</option>
+      <option value="new_deaths_smoothed">new_deaths_smoothed</option>
+      <option value="total_deaths_per_million">total_deaths_per_million</option>
+      <option value="new_deaths_per_million">new_deaths_per_million</option>
+      <option value="new_deaths_smoothed_per_million">new_deaths_smoothed_per_million</option>
+
+      <option value="excess_mortality">excess_mortality</option>
+      <option value="excess_mortality_cumulative">excess_mortality_cumulative</option>
+      <option value="excess_mortality_cumulative_absolute">excess_mortality_cumulative_absolute</option>
+      <option value="excess_mortality_cumulative_per_million">excess_mortality_cumulative_per_million </option>
+
+      <option value="icu_patients">icu_patients</option>
+      <option value="icu_patients_per_million">icu_patients_per_million</option>
+      <option value="hosp_patients">hosp_patients</option>
+      <option value="hosp_patients_per_million">hosp_patients_per_million</option>
+      <option value="weekly_icu_admissions">weekly_icu_admissions</option>
+      <option value="weekly_icu_admissions_per_million">weekly_icu_admissions_per_million</option>
+      <option value="weekly_hosp_admissions">weekly_hosp_admissions</option>
+      <option value="weekly_hosp_admissions_per_million">weekly_hosp_admissions_per_million</option>
+
+      <option value="stringency_index">stringency_index</option>
+      <option value="reproduction_rate">reproduction_rate</option>
+
+      <option value="total_tests">total_tests</option>
+      <option value="new_tests">new_tests</option>
+      <option value="total_tests_per_thousand">total_tests_per_thousand</option>
+      <option value="new_tests_per_thousand">new_tests_per_thousand</option>
+      <option value="new_tests_smoothed">new_tests_smoothed</option>
+      <option value="new_tests_smoothed_per_thousand">new_tests_smoothed_per_thousand</option>
+      <option value="positive_rate">positive_rate</option>
+      <option value="tests_per_case">tests_per_case</option>
+      <option value="tests_units">tests_units</option>
+
+      <option value="total_vaccinations">total_vaccinations</option>
+      <option value="people_vaccinated">people_vaccinated</option>
+      <option value="people_fully_vaccinated">people_fully_vaccinated</option>
+      <option value="total_boosters">total_boosters</option>
+      <option value="new_vaccinations">new_vaccinations</option>
+      <option value="new_vaccinations_smoothed">new_vaccinations_smoothed</option>
+      <option value="total_vaccinations_per_hundred">total_vaccinations_per_hundred</option>
+      <option value="people_vaccinated_per_hundred">people_vaccinated_per_hundred</option>
+      <option value="people_fully_vaccinated_per_hundred">people_fully_vaccinated_per_hundred</option>
+      <option value="total_boosters_per_hundred">total_boosters_per_hundred</option>
+      <option value="new_vaccinations_smoothed_per_million">new_vaccinations_smoothed_per_million</option>
+      <option value="new_people_vaccinated_smoothed">new_people_vaccinated_smoothed</option>
+      <option value="new_people_vaccinated_smoothed_per_hundred">new_people_vaccinated_smoothed_per_hundred
+      </option>
+    </select>
+    <br>
+
+    <label for="month">Choose a month you want to use:</label>
+    <select id="month" name="month">
+      <option value="2020-01">2020-01</option>
+      <option value="2020-02">2020-02</option>
+      <option value="2020-03">2020-03</option>
+      <option value="2020-04">2020-04</option>
+      <option value="2020-05">2020-05</option>
+      <option value="2020-06">2020-06</option>
+      <option value="2020-07">2020-07</option>
+      <option value="2020-08">2020-08</option>
+      <option value="2020-09">2020-09</option>
+      <option value="2020-10">2020-10</option>
+      <option value="2020-11">2020-11</option>
+      <option value="2020-12">2020-12</option>
+
+      <option value="2021-01">2021-01</option>
+      <option value="2021-02">2021-02</option>
+      <option value="2021-03">2021-03</option>
+      <option value="2021-04">2021-04</option>
+      <option value="2021-05">2021-05</option>
+      <option value="2021-06">2021-06</option>
+      <option value="2021-07">2021-07</option>
+      <option value="2021-08">2021-08</option>
+      <option value="2021-09">2021-09</option>
+      <option value="2021-10">2021-10</option>
+      <option value="2021-11">2021-11</option>
+      <option value="2021-12">2021-12</option>
+
+      <option value="2022-01">2022-01</option>
+      <option value="2022-02">2022-02</option>
+      <option value="2022-03">2022-03</option>
+      <option value="2022-04">2022-04</option>
+      <option value="2022-05">2022-05</option>
+      <option value="2022-06">2022-06</option>
+      <option value="2022-07">2022-07</option>
+      <option value="2022-08">2022-08</option>
+      <option value="2022-09">2022-09</option>
+      <option value="2022-10">2022-10</option>
+      <option value="2022-11">2022-11</option>
+      <option value="2022-12">2022-12</option>
+    </select>
+    <br>
+
+    <h3>Regression Analysis Graph</h3>
+    <label for="feature">Choose a feature you want to predict:</label>
+    <select id="feature" name="feature">
+      <option value="total_deaths_per_million">total_deaths_per_million</option>
+      <option value="total_cases_per_million">total_cases_per_million</option>
+    </select>
+    <br>
+
+    <label for="regressionMethod">Choose a regression method you want to use:</label>
+    <select id="regressionMethod" name="regressionMethod">
+      <option value="Linear regression">Linear regression</option>
+      <option value="Decision tree regression">Decision tree regression</option>
+      <option value="Random forest regression">Random forest regression</option>
+      <option value="Gradient-boosted tree regression">Gradient-boosted tree regression</option>
+      <option value="Isotonic regression">Isotonic regression</option>
+    </select>
+    <br>
+
+    <h3>Graph</h3>
+    <label for="graph">Choose a graph you want to show:</label>
+    <select id="graph" name="graph">
+      <option value="Bar graph">Bar graph</option>
+      <option value="Line graph">Line graph</option>
+      <option value="Regression graph">Regression Analysis graph</option>
+    </select>
+    <input type="hidden" name="send" value="graph">
+    <input type="submit">
+  </form>
+
+  {% if isPress == true %}
+  <h2>Dataframe</h2>
+  {% for df in dfTable %} {{df|safe}} {% endfor %}
+  <h2>Data descriptive statistics</h2>
+  {% for dds in ddsTable %} {{dds|safe}} {% endfor %}
+
+  <h2>{{title}}</h2>
+  <img src="data:image/png;base64, {{plotUrl}}">
+
+  {% if graph == "Regression graph" %}
+  {% if cnt != "0.0" %}
+  <h3>number of country: {{cnt}}</h3>
+  {% endif %}
+
+  <h2>Evaluation Metrics</h2>
+  <h3>MAE: {{mae}}</h3>
+  <h3>MSE: {{mse}}</h3>
+  <h3>RMSE: {{rmse}}</h3>
+  <h3>R2: {{r2}}</h3>
+
+  {% if regressionMethod == "Linear regression" %}
+  {% if target == "total_deaths_per_million" %}
+  <h2>每一單位增加會影響多少的死亡率</h2>
+  {% else %}
+  <h2>每一單位增加會影響多少的確診率</h2>
+  {% endif %}
+  <h3>aged_70_older: {{aged_70_older}}</h3>
+  <h3>gdp_per_capita: {{gdp_per_capita}}</h3>
+  <h3>life_expectancy: {{life_expectancy}}</h3>
+  <h3>hospital_beds_per_thousand: {{hospital_beds_per_thousand}}</h3>
+  {% endif %}
+  {% endif %}
+  {% endif %}
+</body>
+
+</html>
